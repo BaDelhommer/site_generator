@@ -36,3 +36,4 @@ def text_node_to_html_node(text_node):
         return LeafNode("a", text_node.text, {"href": f"{text_node.url}"})
     if text_node.text_type == text_type_image:
         return LeafNode("img", "", {"src": f"{text_node.url}", "alt": f"{text_node.text}"})
+    raise ValueError("Text type nor supported")
